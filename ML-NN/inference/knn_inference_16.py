@@ -13,7 +13,6 @@ def get_memory_utilization():
     return memory_used_mb
 
 
-
 phase_name = 'Load dataset'
 print(f"{phase_name} - Start: {time.strftime('%Y-%m-%d %H:%M:%S')}")
 # Load the MNIST dataset
@@ -31,6 +30,7 @@ print(f"{phase_name} - Start: {time.strftime('%Y-%m-%d %H:%M:%S')}")
 # Load the saved KNN model
 loaded_knn = joblib.load('knn_model_quantized.pkl')  # Load the quantized model
 print(f"{phase_name} - End: {time.strftime('%Y-%m-%d %H:%M:%S')}")
+
 
 phase_name = 'inference'
 print(f"{phase_name} - Start: {time.strftime('%Y-%m-%d %H:%M:%S')}")
