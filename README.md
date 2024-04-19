@@ -25,7 +25,7 @@ The project involves testing three categories of models:
    - Region-based Convolutional Neural Network (R-CNN)
    
 3. Deep Learning Models:
-   - VGG-16
+   - ResNet-50
    - BERT
    - Single Shot MultiBox Detector (SSD)
 
