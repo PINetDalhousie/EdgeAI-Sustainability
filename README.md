@@ -79,3 +79,84 @@ For installing OpenVINO, please refer to the official documentation provided by 
 ## Conclusion
 This project provides a comprehensive framework for testing AI models on edge devices. By following the instructions outlined in this README, you can train, transform, and deploy models on various edge devices and evaluate their performance metrics effectively.
 
+
+
+Table 1: Hyperparameters of KNN, Decision Tree (DT), SVM, and Linear Classifier
+Model	Hyperparameters
+KNN	- Neighbors: 3
+- Data Precision: 16-bit
+DT	- Data Precision: 16-bit
+- Random State: Fixed
+SVM	- Gamma: 0.001
+- Data Precision: 16-bit
+Linear	- Optimizer: SGD
+- Loss Function: Categorical Cross-Entropy
+- Epochs: 5
+- Batch Size: 64
+- Validation Split: 20%
+- Quantization: FP16 for TensorFlow Lite
+Table 2: Hyperparameters of FFNN, CNN, R-CNN, and ANN
+Model	Hyperparameters
+FFNN	- Architecture: 2 Dense Layers (128, 64 units) with ReLU
+- Output Layer: 10 units with Softmax
+- Optimizer: Adam
+- Loss: Categorical Cross-Entropy
+- Epochs: 5
+- Batch Size: 64
+- Validation Split: 20%
+- Quantization: FP16 for TensorFlow Lite
+CNN	- Layers: 2 Conv Layers (32, 64 filters), 3x3 kernels
+- Pooling: 2 Max-Pooling layers (2x2)
+- Dense Layer: 128 units with ReLU
+- Output Layer: 10 units with Softmax
+- Optimizer: Adam
+- Loss: Categorical Cross-Entropy
+- Epochs: 5
+- Batch Size: 64
+- Quantization: FP16 for TensorFlow Lite
+R-CNN	- Conv Layers: 3 Layers (32, 64, 64 filters), 3x3 kernels
+- Pooling: 3 Max-Pooling layers (2x2)
+- Dense Layer: 256 units with ReLU
+- Output Layer: 10 units with Softmax
+- Optimizer: Adam
+- Loss: Categorical Cross-Entropy
+- Epochs: 5
+- Batch Size: 32
+- Quantization: FP16 for TensorFlow Lite
+ANN	- Architecture: Custom Layer Configuration
+- Optimizer: Adam
+- Loss: Categorical Cross-Entropy
+- Epochs: 10
+- Batch Size: 64
+- Validation Split: 20%
+Table 3: Hyperparameters of ResNet50 and MobileSSD
+Model	Hyperparameters
+ResNet-50	- Architecture: 50 layers with GlobalAveragePooling2D
+- Dense Layers: 1024 units with ReLU
+- Image Size: 224x224 pixels
+- Optimizer: Adam
+- Loss Function: Sparse Categorical Cross-Entropy
+- Batch Size: 32
+- Transfer Learning: Pre-trained ImageNet weights with frozen layers
+MobileSSD	- Architecture: Depthwise Separable Convolutions
+- Image Size: 224x224 pixels
+- Optimizer: Adam
+- Loss Function: Sparse Categorical Cross-Entropy
+- Batch Size: 32
+- Transfer Learning: Pre-trained ImageNet weights with frozen layers
+Table 4: Hyperparameters of TinyBERT and Phi-2-Orange
+Model	Hyperparameters
+TinyBERT	- Learning Rate: 2×10−52×10−5
+- Epochs: 3
+- Optimizer: Adam
+- Loss Function: Sparse Categorical Cross-Entropy
+- Dataset: GLUE
+- Tokenizer: BertTokenizer
+- Deployment: TensorFlow Lite
+Phi-2-Orange	- Batch Size (Training): 16
+- Batch Size (Evaluation): 64
+- Epochs: 3
+- Warm-up Steps: Configured
+- Weight Decay: Configured
+- Dataset: OpenAssistant
+- Managed by: Hugging Face Trainer
