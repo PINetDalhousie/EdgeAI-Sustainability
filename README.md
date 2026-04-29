@@ -427,12 +427,11 @@ Full results with confidence intervals are in the `results/` directory and in th
 ## Citation
 
 ```bibtex
-@inproceedings{sobhani2025edgeai,
-  title     = {Sustainable Edge AI Inference: Measuring Performance and Energy Trade-offs},
-  author    = {Sobhani, Ghazal and Ifath, Md. Monzurul Amin and Sharma, Tushar and Haque, Israat},
-  booktitle = {Proceedings of [Conference Name]},
-  year      = {2025},
-  note      = {Dalhousie University}
+@article{sobhani2025sustainability,
+  title={On the Sustainability of AI Inferences in the Edge},
+  author={Sobhani, Ghazal and Ifath, Md Monzurul Amin and Sharma, Tushar and Haque, Israat},
+  journal={arXiv preprint arXiv:2507.23093},
+  year={2025}
 }
 ```
 
