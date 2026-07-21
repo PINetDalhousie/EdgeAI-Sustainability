@@ -4,12 +4,11 @@
 [![TensorFlow 2.12](https://img.shields.io/badge/TensorFlow-2.12.0-orange.svg)](https://www.tensorflow.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-> **Replication package** for the paper *"Characterizing Performance–Power Trade-offs of AI Inference on Heterogeneous Edge Devices"* — a unified benchmarking framework for evaluating AI model inference performance and energy consumption across heterogeneous edge devices.
+> **Replication package** for the paper *"Characterizing Performance–Power Trade-offs of AI Inference on Heterogeneous Edge Devices"*.
+ <!-- - a unified benchmarking framework for evaluating AI model inference performance and energy consumption across heterogeneous edge devices. -->
 
 > **Note:** This repository is the artifact accompanying the above paper (currently under
-> review). Everything the paper reports — the measurement scheme, measurement window,
-> models, datasets, frameworks, metrics, and results — is described here to match the
-> paper. Results the paper **defers to this repository for space** (MobileSSD input-size
+> review). Results the paper **defers to this repository for space** (MobileSSD input-size
 > impact and the LLM parameter-tuning tables) live in [`results/`](results/README.md). The
 > repository also ships some **supplementary material beyond the paper's scope** (e.g.
 > Traditional ML models/results), which is clearly marked where it appears.
@@ -479,17 +478,17 @@ timestamps with the script's phase timestamps to extract inference-specific powe
 | **Pre-measurement** | Terminate background processes, reactivate venv, verify no caching |
 | **Warm-up** | Stable thermal conditions with active cooling where necessary |
 
-Following the paper's evaluation protocol, **each test is run ten times and we report the
-average and 95% confidence interval**.
+<!-- Following the paper's evaluation protocol, **each test is run ten times and we report the
+average and 95% confidence interval**. -->
 
-> **Note on batch size / input parameters:** the default measurements use the models'
+<!-- > **Note on batch size / input parameters:** the default measurements use the models'
 > standard input settings. Inference-time parameters — input resolution (e.g. ResNet-50
 > 224×224 → 512×512), batch size (the RPi effectively supports only batch size 1, while
 > the Jetson Nano sustains 16–32), and, for LLMs, input token length and token window
 > size — are studied separately as tunable parameters in the paper (RQ3). The detailed
 > per-device results the paper defers for space (MobileSSD input-resolution impact, and
 > LLM input-token-length / token-window-size tables) are provided in
-> [`results/`](results/README.md).
+> [`results/`](results/README.md). -->
 
 ---
 
@@ -506,11 +505,11 @@ is documented here. Read this before [Running Experiments](#running-experiments)
   directory with the expected model file present, **not** on passing flags. *(Do not modify
   the scripts; adjust the working directory / file placement instead.)*
 - **Datasets download automatically on first run:**
-  - **MNIST** — via `keras.datasets.mnist.load_data()` (used by the NN and traditional-ML
+  - **MNIST** via `keras.datasets.mnist.load_data()` (used by the NN and traditional-ML
     scripts, and the accuracy check in several DL scripts).
-  - **ImageNet** (`imagenet_v2/matched-frequency`) — via `tensorflow-datasets`, for
+  - **ImageNet** (`imagenet_v2/matched-frequency`) via `tensorflow-datasets`, for
     ResNet-50 / MobileSSD training (large; one-time TFDS setup).
-  - **GLUE** (TinyBERT) and **OASST1 / OpenAssistant** (Phi-2-Orange) — via `transformers` /
+  - **GLUE** (TinyBERT) and **OASST1 / OpenAssistant** (Phi-2-Orange) via `transformers` /
     `datasets`; Phi-2 weights are pulled from the Hugging Face Hub.
 - **Models are loaded by fixed filename** from the script's working directory (a few read
   from a `lite_images/` subfolder). The exact name is set at the top of each script
@@ -648,4 +647,4 @@ are in [`results/`](results/README.md).
 
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
-**Contact:** [PINet Lab, Dalhousie University](https://github.com/PINetDalhousie) · Issues: [GitLab Issues](https://gitlab.com/sobhanii/edgeai/-/issues)
+**Contact:** [PINet Lab, Dalhousie University](https://github.com/PINetDalhousie) · Issues: [GitHub Issues](https://github.com/PINetDalhousie/EdgeAI-Sustainability/issues)

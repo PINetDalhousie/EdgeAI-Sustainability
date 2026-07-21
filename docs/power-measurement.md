@@ -66,11 +66,11 @@ Stabilize → record → run → export → align → integrate, repeated **10×
 | [`phase_identification.py`](../phase_identification.py) | Groups the exported meter-log lines into the five phases using the timestamps the inference script printed. |
 | [`measurments.py`](../measurments.py) | Adds timestamps to the meter CSV (start time + sampling rate) and sums energy within a given time range. |
 
-## Consistency with the paper
+<!-- ## Consistency with the paper
 
 - Power is sampled at **16 Hz**; the baseline is the **first 48 samples over the first 3 s**,
   subtracted to isolate inference power — matching the paper's measurement scheme.
 - The meter and its PC app capture only the raw electrical readings. The other three metrics
   come from the inference scripts: **F1-score/accuracy** from predictions vs. ground truth,
   **inference time** from `time.strftime()` start/finish timestamps, and **memory
-  utilization** from `psutil`.
+  utilization** from `psutil`. -->
