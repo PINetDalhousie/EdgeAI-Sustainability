@@ -31,7 +31,7 @@
 - [Reproducibility](#reproducibility)
 - [Running Experiments](#running-experiments)
 - [Key Results Summary](#key-results-summary)
-<!-- - [Citation](#citation) -->
+- [Citation](#citation)
 
 ---
 
@@ -86,6 +86,7 @@ EdgeAI-Sustainability/
 ├── measurments.py                  # Energy computation from USB power-meter CSV logs
 ├── phase_identification.py         # Splits power-meter logs into the 5 inference phases
 └── README.md
+
 ```
 
 > **Note on measurement:** there is no single `measure_inference.py`. Instead, each
@@ -628,9 +629,9 @@ paper. Additional results deferred from the paper for space — the MobileSSD in
 figure and the LLM parameter-tuning tables (input token length and token window size) —
 are in [`results/`](results/README.md).
 
-<!-- ---
 
 ## Citation
+If you use this code or findings, please cite:
 
 ```bibtex
 @article{sobhani2025sustainability,
@@ -641,7 +642,6 @@ are in [`results/`](results/README.md).
 }
 ```
 
---- -->
 
 ## License
 
